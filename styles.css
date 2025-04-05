@@ -124,9 +124,11 @@ main img {
 .recetas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
+    gap: 2em;
+    margin: 3vh auto;
+    padding: 0 5vw;
+    max-width: 1200px;
+  }
 
 .receta-card {
     background-color: white;
@@ -134,11 +136,11 @@ main img {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
     padding: 20px;
-    transition: transform 0.2s;
+    transition: transform 0.3s;
 }
 
 .receta-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 .receta-card img {
@@ -171,7 +173,41 @@ main img {
 
 .receta-card a:hover {
     background-color: #00796B;
+    transform: scale(1.03);
 }
+
+.contacto {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .contacto label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .contacto input,
+  .contacto select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .contacto button {
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 footer {
     background-color: #00796B;
     color: white;
@@ -193,27 +229,36 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 32px;
+    header {
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+      background-size: cover;
     }
-
-    .logo img {
-        width: 120px;
+  
+    header .logo {
+      justify-content: center;
     }
-
+  
     nav ul {
-        flex-direction: column;
+      flex-direction: column;
+      padding: 10px 0;
     }
-
-    nav ul li {
-        margin: 10px 0;
+  
+    .recetas-grid {
+      grid-template-columns: 1fr; /* 1 receta por fila en móvil */
     }
-
+  
     main h2 {
-        font-size: 24px;
+      font-size: 1.5em;
     }
-
+  
     main p {
-        font-size: 1rem;
+      font-size: 1em;
     }
-}
+  
+    footer {
+      font-size: 0.9em;
+      padding: 2vh 5vw;
+    }
+  }

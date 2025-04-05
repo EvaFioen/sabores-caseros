@@ -29,14 +29,61 @@
 
     <main>
         <section>
-            <h2>Contacto</h2>
-            <p>Aqui se mostrara como contactar</p>
-            
-        </section>
+            <section class="contacto">
+                <h2>Formulario de Consultas</h2>
+                <form id="formulario-consulta">
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" id="nombre" name="nombre">
+              
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email">
+              
+                  <label for="motivo">Motivo de consulta:</label>
+                  <select id="motivo" name="motivo">
+                    <option value="">Seleccione una opción</option>
+                    <option value="recetas">Consulta sobre recetas</option>
+                    <option value="sugerencias">Sugerencias</option>
+                    <option value="otros">Otros</option>
+                  </select>
+              
+                  <button type="submit">Enviar</button>
+                </form>
+                <p id="mensaje-confirmacion" style="display:none; color: green; font-weight: bold;"></p>
+              
+                <!-- Botón para cambiar estilos como ejemplo del segundo script -->
+                <button onclick="cambiarEstilos()">Cambiar estilo del sitio</button>
+              </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Sabores Caseros. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        // Script relacionado con el formulario
+        document.getElementById("formulario-consulta").addEventListener("submit", function(e) {
+          e.preventDefault(); // Previene el envío real
+      
+          const nombre = document.getElementById("nombre").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const motivo = document.getElementById("motivo").value;
+      
+          if (!nombre || !email || !motivo) {
+            alert("Por favor, complete todos los campos.");
+            return;
+          }
+      
+          // Mostrar mensaje de confirmación
+          document.getElementById("mensaje-confirmacion").style.display = "block";
+          document.getElementById("mensaje-confirmacion").textContent = "¡Gracias por tu consulta, " + nombre + "!";
+          document.getElementById("formulario-consulta").reset();
+        });
+      
+        // Segundo script: cambiar el estilo del body
+        function cambiarEstilos() {
+          document.body.style.backgroundColor = "#e0f7fa";
+          document.body.style.fontFamily = "Comic Sans MS, cursive, sans-serif";
+          alert("¡Estilo cambiado con éxito!");
+        }
+      </script>
 </body>
 </html>
