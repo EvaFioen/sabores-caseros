@@ -427,6 +427,8 @@ footer p {
 
     .recetas-grid, .recetas-destacadas .recetas-grid {
         grid-template-columns: 1fr; 
+        width: 100%;
+        max-width: 350px;
     }
 
     .receta-card, .recetas-destacadas .receta-card {
