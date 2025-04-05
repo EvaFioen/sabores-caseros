@@ -425,7 +425,7 @@ footer p {
         font-size: 0.9rem; 
     }
 
-    .recetas-grid, .recetas-destacadas  {
+    .recetas-grid, .recetas-destacadas .recetas-grid {
         grid-template-columns: 1fr; 
     }
 
