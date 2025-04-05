@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabores Caseros</title>
     <link rel="icon" href="logo1.png" type="image/png">
-    <link rel="apple-touch-icon" href="safari.png" type="image/png" sizes="180x180">
-
+    <link rel="apple-touch-icon" href="logo1.png" type="image/png" sizes="180x180">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="index.html">
-            <img src="logo.png" alt="Logo de Sabores Caseros">
+                <img src="logo.png" alt="Logo de Sabores Caseros">
+            </a>
+        </div>
+        <div class="titulo">
             <h1>Sabores Caseros</h1>
-        </a>
         </div>
         <nav>
             <ul>
                 <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
                 <li><a href="recetas.html"><i class="fas fa-utensils"></i> Recetas</a></li>
-                <li><a href="blog.html"><i class="fas fa-book"></i> Blog</a></li>
+                <li><a href="preguntas.html"><i class="fas fa-book"></i> Preguntas Frecuentes</a></li>
                 <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
             </ul>
         </nav>
@@ -45,6 +46,8 @@
                     <option value="sugerencias">Sugerencias</option>
                     <option value="otros">Otros</option>
                   </select>
+                  <label for="mensaje">Mensaje:</label>
+                  <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta aquí..."></textarea>
               
                   <button type="submit">Enviar</button>
                 </form>
@@ -66,11 +69,12 @@
           const nombre = document.getElementById("nombre").value.trim();
           const email = document.getElementById("email").value.trim();
           const motivo = document.getElementById("motivo").value;
-      
-          if (!nombre || !email || !motivo) {
-            alert("Por favor, complete todos los campos.");
-            return;
-          }
+          const mensaje = document.getElementById("mensaje").value.trim();
+
+        if (!nombre || !email || !motivo || !mensaje) {
+          alert("Por favor, complete todos los campos.");
+          return;
+        }
       
           // Mostrar mensaje de confirmación
           document.getElementById("mensaje-confirmacion").style.display = "block";

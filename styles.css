@@ -11,102 +11,91 @@ body {
     background-color: #fff;
     color: #333
 }
-h1, h2, h3{
-    font-family: 'Playfair Display', serif;
+h2, h3 {
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.5px;
 }
+
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('header.jpg');
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('header.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 40px 20px;
-    text-align: center;
+    padding: 20px 10px; /* Adjust padding */
     color: white;
-  }
+}
 
 header .logo {
-    display: flex;
-    align-items: center; 
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Enable Flexbox for the logo */
+    align-items: center; /* Center logo vertically */
+    justify-content: flex-start; /* Align logo to the left */
+    opacity: 0.7; 
+    margin-left: 20px; /* Optional: Add margin to space it from the left */
 }
 
 header .logo img {
-    width: 90px;
-    height: 90px;;
-    margin-bottom: 0px;
-    display: flex;
-    margin-right: 10px;
+    width: 90px; /* Logo size */
+    height: 90px; /* Logo size */
+    margin-right: 10px; /* Space between logo and title */
+}
 
+header .titulo {
+    flex: 1; /* Allow the title to grow and take up space */
+    text-align: center; /* Center title text */
 }
 
 header h1 {
-    font-size: 30px;
-    margin-top: 0px;
-    align-items:center;
+    font-size: 30px; /* Title size */
+    margin: 0; /* Remove default margin */
 }
-
-.logo a {
-  text-decoration: none;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logo a:hover {
-    transform: scale(1.05); /* or add other hover effects */
-    cursor: pointer;
-}
-
-.logo a h1 {
-    margin-left: 10px;
-    font-size: 30px;
-}
-
-
 
 nav {
-    background-color: transparent; 
+    width: 100%; /* Ensure nav takes full width */
+    text-align: center; /* Center nav links */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px 0 0;
-    gap: 20px;
-  }
-  
-  nav ul li a {
-    color: white;
+    justify-content: center; /* Center the nav items */
+    padding: 20px 0; /* Padding above and below nav */
+    gap: 20px; /* Space between nav items */
+}
+
+nav ul li a {
+    color: white; /* Link color */
     text-decoration: none;
     font-size: 1.2rem;
     padding: 10px 15px;
     border-radius: 8px;
     transition: background-color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    background-color: #FFC107;
-    color: black;
-  }
+}
+
+nav ul li a:hover {
+    background-color: #FFC107; /* Hover background color */
+    color: black; /* Hover text color */
+}
+
 
 main {
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
+    background-color: #f9f9f9;
 }
 
 main h2 {
-    font-size: 32px;
-    color: #00796B; 
+    font-size: 2.2rem;
+    color: #2c3e50;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 main p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    color: #555;
     margin-bottom: 20px;
 }
 
@@ -114,8 +103,97 @@ main img {
     max-width: 100%;
     height: auto;
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
+
+.pagina-preguntas {
+    padding: 60px 20px;
+    color: #2c3e50;
+    font-family: 'Playfair Display', serif;
+    background-color: #f4f4f4;
+}
+
+.bienvenida h2 {
+    font-size: 2.4rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.bienvenida .marca {
+    background: linear-gradient(to right, #7f8c8d, #2c3e50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bienvenida p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.quienes-somos {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 15px 0;
+    transition: transform 0.3s;
+}
+
+.quienes-somos:hover {
+    transform: scale(1.02);
+}
+
+.quienes-somos h3 {
+    font-size: 1.8rem;
+    color: #00796B;
+    margin-bottom: 10px;
+}
+
+.preguntas-juego {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 15px 0;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.preguntas-juego:hover {
+    transform: scale(1.02);
+}
+
+.preguntas-juego h3 {
+    font-size: 1.8rem;
+    color: #00796B;
+    margin-bottom: 10px;
+}
+
+.preguntas-juego p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.jugar-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #00796B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+.jugar-btn:hover {
+    background-color: #005F56;
+    transform: scale(1.05);
+}
+
 .recetas {
     text-align: center;
     padding: 40px 20px;
@@ -123,7 +201,7 @@ main img {
 
 .recetas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
     gap: 2em;
     margin: 3vh auto;
     padding: 0 5vw;
@@ -176,6 +254,67 @@ main img {
     transform: scale(1.03);
 }
 
+.recetas-destacadas {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px; 
+}
+
+.recetas-destacadas .receta-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px; 
+    transition: transform 0.3s;
+    align-items: center;
+    width: 350px; 
+    margin: 0 auto; 
+}
+
+.recetas-destacadas .receta-card img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.recetas-destacadas h3 {
+    font-size: 35px !important;
+}
+
+.faq {
+    max-width: 800px; /* Limita el ancho de la sección de preguntas */
+    margin: 0 auto; /* Centra la sección en la página */
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 15px 0; /* Espaciado entre preguntas */
+    transition: transform 0.3s;
+}
+
+.faq-item:hover {
+    transform: scale(1.02); /* Efecto de hover */
+}
+
+.faq-question {
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    color: #00796B; /* Color para la pregunta */
+}
+
+.faq-answer {
+    display: none; /* Inicialmente oculta la respuesta */
+    margin-top: 10px; /* Espaciado entre la pregunta y la respuesta */
+}
+
+
+
+
 .contacto {
     background-color: #ffffff;
     padding: 40px;
@@ -191,7 +330,7 @@ main img {
   }
   
   .contacto input,
-  .contacto select {
+  .contacto select, .contacto textarea {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -199,6 +338,9 @@ main img {
     border-radius: 5px;
     border: 1px solid #ccc;
   }
+  .contacto textarea {
+    resize: vertical; /* Permitir redimensionar verticalmente */
+}
   
   .contacto button {
     padding: 10px 20px;
@@ -207,6 +349,7 @@ main img {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: 10px;
   }
 footer {
     background-color: #00796B;
@@ -226,6 +369,7 @@ footer img {
 footer p {
     font-size: 10px;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
