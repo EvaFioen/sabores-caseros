@@ -201,11 +201,12 @@ main img {
 
 .recetas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2em;
     margin: 3vh auto;
     padding: 0 5vw;
     max-width: 1200px;
+    box-sizing: border-box;
   }
 
 .receta-card {
@@ -215,6 +216,8 @@ main img {
     overflow: hidden;
     padding: 20px;
     transition: transform 0.3s;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .receta-card:hover {
@@ -427,11 +430,12 @@ footer p {
 
     .recetas-grid {
         grid-template-columns: 1fr; 
+        padding: 0 10px;
     }
 
     .receta-card {
-        width: auto; 
-        padding: 15px; 
+        width: 100%; 
+        margin: 0 auto;
     }
 
     .recetas-destacadas {
@@ -443,8 +447,15 @@ footer p {
     }
 
     .recetas-destacadas .receta-card {
-        flex: 1 1 100%;
-    max-width: 350px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 20px; 
+        transition: transform 0.3s;
+        align-items: center;
+        width: 100%; 
+        margin: 0 auto; 
     }
 
     footer {
