@@ -425,11 +425,11 @@ footer p {
         font-size: 0.9rem; 
     }
 
-    .recetas-grid {
+    .recetas-grid, .recetas-destacadas  {
         grid-template-columns: 1fr; 
     }
 
-    .receta-card {
+    .receta-card, .recetas-destacadas .receta-card {
         width: auto; 
         padding: 15px; 
     }
