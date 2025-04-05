@@ -425,15 +425,26 @@ footer p {
         font-size: 0.9rem; 
     }
 
-    .recetas-grid, .recetas-destacadas .recetas-grid {
+    .recetas-grid {
         grid-template-columns: 1fr; 
-        width: 100%;
-        max-width: 350px;
     }
 
-    .receta-card, .recetas-destacadas .receta-card {
+    .receta-card {
         width: auto; 
         padding: 15px; 
+    }
+
+    .recetas-destacadas {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .recetas-destacadas .receta-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
     }
 
     footer {
