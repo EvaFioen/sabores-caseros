@@ -435,16 +435,16 @@ footer p {
     }
 
     .recetas-destacadas {
-        padding: 20px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
+        gap: 20px;
+        padding: 20px;
     }
 
     .recetas-destacadas .receta-card {
-        width: 100%;
-        max-width: 100%;
-        padding: 15px;
-        box-sizing: border-box;
+        flex: 1 1 100%;
+    max-width: 350px;
     }
 
     footer {
