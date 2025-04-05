@@ -374,35 +374,67 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
-      flex-direction: column;
-      text-align: center;
-      height: auto;
-      background-size: cover;
+        flex-direction: column; 
+        text-align: center; 
+        padding: 15px 10px; 
     }
-  
+
     header .logo {
-      justify-content: center;
+        justify-content: center; 
+        margin-left: 0; 
     }
-  
+
     nav ul {
-      flex-direction: column;
-      padding: 10px 0;
+        flex-direction: column; 
+        padding: 10px 0; 
     }
-  
-    .recetas-grid {
-      grid-template-columns: 1fr; /* 1 receta por fila en móvil */
+
+    nav ul li a {
+        padding: 10px 5px; 
+        font-size: 1rem; 
     }
-  
+
+    main {
+        padding: 40px 10px; 
+    }
+
     main h2 {
-      font-size: 1.5em;
+        font-size: 1.8rem; 
     }
-  
+
     main p {
-      font-size: 1em;
+        font-size: 1rem; 
     }
-  
+
+    .bienvenida h2 {
+        font-size: 2rem; 
+    }
+
+    .quienes-somos,
+    .preguntas-juego {
+        padding: 15px; 
+    }
+
+    .quienes-somos h3,
+    .preguntas-juego h3 {
+        font-size: 1.5rem; 
+    }
+
+    .jugar-btn {
+        padding: 10px 20px; 
+        font-size: 0.9rem; 
+    }
+
+    .recetas-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .receta-card {
+        width: auto; 
+        padding: 15px; 
+    }
+
     footer {
-      font-size: 0.9em;
-      padding: 2vh 5vw;
+        font-size: 0.8em; 
     }
-  }
+}
