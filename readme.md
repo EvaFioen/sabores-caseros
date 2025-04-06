@@ -13,9 +13,10 @@ Contacto: Escribe tu nombre y correo electrónico, selecciona la opción de cons
 
 Algunas de nuestras recetas son:
 
-Tortilla de Patatas
-Paella Valenciana
+Tortilla de Patatas,
+Paella Valenciana,
 Croquetas de jamón y queso
+
 Uso de la Web
 
 La web está diseñada para ser intuitiva y fácil de navegar. Solo necesitas seleccionar una receta de la lista para ver los detalles, los ingredientes y los pasos a seguir. También puedes disfrutar de los videos y aprender más sobre cada plato.
