@@ -27,7 +27,6 @@
     </header>
 
     <main>
-        <section>
             <section class="contacto">
                 <h2>Formulario de Consultas</h2>
                 <form id="formulario-consulta">
@@ -38,25 +37,27 @@
                   <input type="email" id="email" name="email">
               
                   <label for="motivo">Motivo de consulta:</label>
+                  
                   <select id="motivo" name="motivo">
                     <option value="">Seleccione una opción</option>
                     <option value="recetas">Consulta sobre recetas</option>
                     <option value="sugerencias">Sugerencias</option>
                     <option value="otros">Otros</option>
                   </select>
+
                   <label for="mensaje">Mensaje:</label>
                   <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta aquí..."></textarea>
                   <button type="submit">Enviar</button>
                 </form>
                 <p id="mensaje-confirmacion" style="display:none; color: green; font-weight: bold;"></p>
                 <button onclick="cambiarEstilos()">Haga clic aquí para cambiar el estilo</button>
-              </section>
-        </section>
+            </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Sabores Caseros. Todos los derechos reservados.</p>
     </footer>
+    
     <script>
         // Script relacionado con el formulario
         document.getElementById("formulario-consulta").addEventListener("submit", function(e) {
