@@ -4,72 +4,104 @@
     box-sizing: border-box;
     
 }
+h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
 
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Georgia', serif;
     font-size: 16px;
     background-color: #fff;
     color: #333
 }
-h2, h3 {
-    font-weight: 600;
-    color: #333;
-    letter-spacing: 0.5px;
+
+main {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#titulo-logo {
+    font-size: 30px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: mover 2s ease-out forwards;
+}
+
+@keyframes mover {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(1px);
+    }
+    75% {
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 header {
-    display: flex; /* Enable Flexbox */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('header.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 20px 10px; /* Adjust padding */
+    padding: 20px 10px;
     color: white;
 }
 
-header .logo {
-    display: flex; /* Enable Flexbox for the logo */
-    align-items: center; /* Center logo vertically */
-    justify-content: flex-start; /* Align logo to the left */
-    opacity: 0.7; 
-    margin-left: 20px; /* Optional: Add margin to space it from the left */
-}
-
 header .logo img {
-    width: 90px; /* Logo size */
-    height: 90px; /* Logo size */
-    margin-right: 10px; /* Space between logo and title */
-}
-
-header .titulo {
-    flex: 1; /* Allow the title to grow and take up space */
-    text-align: center; /* Center title text */
-}
-
-header h1 {
-    font-size: 30px; /* Title size */
-    margin: 0; /* Remove default margin */
+    opacity: 0.7;
+    width: 90px; 
+    height: 90px; 
+    margin-bottom: 5% 
 }
 
 nav {
-    width: 100%; /* Ensure nav takes full width */
-    text-align: center; /* Center nav links */
+    width: 100%; 
+    text-align: center; 
 }
+
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center the nav items */
-    padding: 20px 0; /* Padding above and below nav */
-    gap: 20px; /* Space between nav items */
+    justify-content: center; 
+    padding: 20px 0; 
+    gap: 20px; 
 }
 
 nav ul li a {
-    color: white; /* Link color */
+    color: white; 
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 18px;
     padding: 10px 15px;
     border-radius: 8px;
     transition: background-color 0.3s ease;
@@ -78,46 +110,6 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #FFC107; /* Hover background color */
     color: black; /* Hover text color */
-}
-
-
-main {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
-main h2 {
-    font-size: 2.2rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-main p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-main img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-.pagina-preguntas {
-    padding: 60px 20px;
-    color: #2c3e50;
-    font-family: 'Playfair Display', serif;
-    background-color: #f4f4f4;
-}
-
-.bienvenida h2 {
-    font-size: 2.4rem;
-    color: #2c3e50;
-    margin-bottom: 10px;
 }
 
 .bienvenida .marca {
@@ -133,40 +125,20 @@ main img {
     color: #666;
 }
 
-.quienes-somos {
+.quienes-somos, .preguntas-juego {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    padding: 40px;
     margin: 15px 0;
     transition: transform 0.3s;
 }
 
-.quienes-somos:hover {
+.quienes-somos:hover, .preguntas-juego:hover {
     transform: scale(1.02);
 }
 
-.quienes-somos h3 {
-    font-size: 1.8rem;
-    color: #00796B;
-    margin-bottom: 10px;
-}
-
-.preguntas-juego {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    margin: 15px 0;
-    transition: transform 0.3s;
-    text-align: center;
-}
-
-.preguntas-juego:hover {
-    transform: scale(1.02);
-}
-
-.preguntas-juego h3 {
+.quienes-somos h3, .preguntas-juego h3 {
     font-size: 1.8rem;
     color: #00796B;
     margin-bottom: 10px;
@@ -194,11 +166,6 @@ main img {
     transform: scale(1.05);
 }
 
-.recetas {
-    text-align: center;
-    padding: 40px 20px;
-}
-
 .recetas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -222,7 +189,6 @@ main img {
     max-width: 100%;
     box-sizing: border-box;
 }
-
 .receta-card:hover {
     transform: scale(1.05);
 }
@@ -235,12 +201,12 @@ main img {
     margin-bottom: 10px;
 }
 
-.receta-card h3 {
+.receta-card h3, .recetas-destacadas .receta-card h3 {
     color: #00796B;
     margin-bottom: 10px;
 }
 
-.receta-card p {
+.receta-card p, .recetas-destacadas .receta-card p {
     font-size: 0.95rem;
     margin-bottom: 15px;
 }
@@ -260,16 +226,7 @@ main img {
     transform: scale(1.03);
 }
 
-
-
-.recetas-destacadas h3 {
-    font-size: 35px !important;
-}
-
-.faq {
-    max-width: 800px; /* Limita el ancho de la sección de preguntas */
-    margin: 0 auto; /* Centra la sección en la página */
-}.recetas-destacadas {
+.recetas-destacadas {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,18 +237,59 @@ main img {
 
 .recetas-destacadas .receta-card {
     width: 100%;
-    max-width: 350px; /* Mantiene el ancho máximo */
+    max-width: 350px; 
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.recetas-destacadas .receta-card img {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-    border-radius: 8px;
+.recetas-destacadas h2{
+    margin-bottom: 10px;
+}
+
+.receta {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-bottom: 30px;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  .ingredientes, .pasos {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  
+  .ingredientes ul, .pasos ol {
+    padding-left: 20px;
+  }
+  
+  .ingredientes li, .pasos li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+
+.faq {
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 
 .faq-item {
@@ -299,17 +297,18 @@ main img {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    margin: 15px 0; /* Espaciado entre preguntas */
+    margin: 15px 0; 
     transition: transform 0.3s;
 }
 
 .faq-item:hover {
-    transform: scale(1.02); /* Efecto de hover */
+    transform: scale(1.02); 
 }
 
 .faq-question {
-    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
-    color: #00796B; /* Color para la pregunta */
+    font-size: 20px;
+    cursor: pointer; 
+    color: #00796B; 
 }
 
 .faq-answer {
@@ -322,9 +321,6 @@ main img {
 .faq-item.active .faq-answer {
     display: block;
 }
-
-
-
 
 .contacto {
     background-color: #ffffff;
@@ -350,7 +346,7 @@ main img {
     border: 1px solid #ccc;
   }
   .contacto textarea {
-    resize: vertical; /* Permitir redimensionar verticalmente */
+    resize: vertical; 
 }
   
   .contacto button {
@@ -362,57 +358,7 @@ main img {
     cursor: pointer;
     margin: 10px;
   }
-  .receta {
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  }
   
-  .receta h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    margin-bottom: 30px;
-  }
-  
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
-
-  .ingredientes {
-    text-align: left;
-  }
-  
-  .ingredientes, .pasos {
-    text-align: left;
-    margin-bottom: 30px;
-  }
-  
-  .ingredientes ul, .pasos ol {
-    padding-left: 20px;
-  }
-  
-  .ingredientes li, .pasos li {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-  }
-
-
-
 footer {
     background-color: #00796B;
     color: white;
@@ -421,17 +367,10 @@ footer {
     width: 100%;
     
 }
-footer img {
-    width: 120px;
-    height: 100px;
-    margin-top: 0px;
-    border-radius: 10px;
-}
 
 footer p {
     font-size: 10px;
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
